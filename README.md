@@ -2,31 +2,31 @@
 
 ## OVERVIEW
 If emotion is happy then the customer is satisfied with the service and if it is love then they are extremely satisfied or if it is angry so he is unsatisfied with it and so on.
-i. Input Text (user input)
-ii. Preprocessing
-iii. Embedding Vectors
-iv. Feature Extraction (CNN)
-v. Emotion Classification
+1. Input Text (user input)
+2. Preprocessing
+3. Embedding Vectors
+4. Feature Extraction (CNN)
+5. Emotion Classification
 
 ## DATA
 Balanced Arabic text Twitter dataset, The dataset has more than 10,000 tweets annotated with eight emotions [1]
 
 
 ## PREPROCESSING
-• Convert some characters like ( أ , آ , إ ) to ا as they are implicitly the same.
-• Removing repeated characters like changing “ مبروووك ” to “ مبروك ”
-• Stemming: Reduce words into their linguistic roots مسافر >>> سفر
+* Convert some characters like ( أ , آ , إ ) to ا as they are implicitly the same.
+* Removing repeated characters like changing “ مبروووك ” to “ مبروك ”
+* Stemming: Reduce words into their linguistic roots مسافر >>> سفر
 
 
 ## EMBEDDING
-• For tweets using embedding model aravec [2]
+* For tweets using embedding model aravec [2]
   Method: Aravec word embedding skip-gram
-  o If the word isn’t in vocabulary not recognized by embedding model.
-  o Then applying stemming to the word.
-  o If stemming word not recognized try using the Google search API to obtain the corrected Query.
-  o If not recognized the word is rarely used so not included in the vocabulary of the embedding model.
+  * If the word isn’t in vocabulary not recognized by embedding model.
+  * Then applying stemming to the word.
+  * If stemming word not recognized try using the Google search API to obtain the corrected Query.
+  * If not recognized the word is rarely used so not included in the vocabulary of the embedding model.
   Aravec embedding vectors (140, 300) (maximum no. of words, vector length)
-• For the labels, converted them into one hot encoded
+* For the labels, converted them into one hot encoded
 
 
 ## FEATURE EXTRACTION
